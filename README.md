@@ -8,8 +8,6 @@ Shot Maps: Understand shooting patterns and effectiveness.
 Additional data plots and visualizations.
 Enhanced user interface and customization options.
 ##Getting Started
-###Prerequisites
-Ensure you have Node.js and npm installed on your machine.
 ###Installation
 Clone the repository:
 ```
@@ -58,4 +56,4 @@ If you have any questions, suggestions, or feedback, feel free to reach out thro
 Thank you for your support and interest in PlotBall!
 
 ##License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the [MIT LICENSE](LICENSE). See the LICENSE file for details.
