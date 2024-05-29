@@ -133,7 +133,7 @@ def pass_map(Match_ID,P_ID):
 
     edff = edf[edf['x_start'] - edf['x_end'] >= 0]
     edfb = edf[edf['x_start'] - edf['x_end'] < 0]
-    assists = edf[edf['pass_assist'] == True]
+    assists = edf[edf['pass_goal_assist'] == True]
     
 
 
