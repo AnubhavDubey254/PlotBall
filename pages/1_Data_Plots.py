@@ -164,7 +164,7 @@ def ShotMap(Match_ID,P_ID):
     match_df2 = sb.events(match_id = Match_ID)
     sdf = match_df2[match_df2['type'] == 'Shot']
     sdf = sdf[sdf['player_id'] == P_ID]
-    sdf = sdf[sdf['miinute'] <= 120]
+    sdf = sdf[sdf['minute'] <= 120]
     edf_g = sdf[sdf['shot_outcome'] == 'Goal']
     edf_ng = sdf[sdf['shot_outcome'] != 'Goal']
 
