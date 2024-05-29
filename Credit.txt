@@ -1,0 +1,16 @@
+# Credits
+
+## Libraries and Frameworks
+
+- [StatsBomb](https://www.statsbomb.com/): Provides publicly available data for sports analytics.
+- [mplsoccer](https://mplsoccer.readthedocs.io/en/latest/): Python library for creating soccer visualizations.
+- [pandas](https://pandas.pydata.org/): Data manipulation and analysis library in Python.
+- [Matplotlib](https://matplotlib.org/stable/): Python Library for creating data visualizations.
+
+## Software Tools
+
+- [Streamlit](https://streamlit.io/): Python library for creating interactive web apps for data science.
+
+## Contributors
+
+-Anubhav Dubey(@AnubhavDubey254) : Implemented General structure of the app as well as Pass Maps and Shot Maps.
