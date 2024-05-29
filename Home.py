@@ -21,5 +21,6 @@ By collaborating, we can make PlotBall a more powerful and user-friendly tool fo
 Whether you're a data enthusiast or a sports analyst, your input will help shape the future of PlotBall.
 Thank you for your support and interest in this project. ''')
 
+st.page_link("1_Data_viz.py",label = "Check Out Plots",icon = "📊")
 
 
