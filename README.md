@@ -7,8 +7,9 @@ Shot Maps: Understand shooting patterns and effectiveness.
 ### Upcoming Features
 Additional data plots and visualizations.
 Enhanced user interface and customization options.
-##Getting Started
-###Installation
+Download Plot option
+## Getting Started
+### Installation
 Clone the repository:
 ```
 bash
