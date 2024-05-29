@@ -153,7 +153,7 @@ def pass_map(Match_ID,P_ID):
     patch2 = mpatches.Patch(color='red', label='Backward Passes') 
     plt.legend(handles=([patch1,patch2])) 
 
-    ax_title = ax.set_title(f"Pass Map of {player} ({edf.shape[0]} passes)\n Forward Passes --> {edff.shape[0]} \n Backward Passes --> {edfb.shape[0]}",fontsize=15)
+    ax_title = ax.set_title(f"Pass Map of {player} ({edf.shape[0]} passes)\n Forward Passes --> {edfb.shape[0]} \n Backward Passes --> {edff.shape[0]}",fontsize=15)
 
 
 
