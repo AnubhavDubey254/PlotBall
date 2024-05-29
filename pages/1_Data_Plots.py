@@ -193,5 +193,4 @@ def main():
      if stat == 'Shot Map':
         ShotMap(Match_id,player_id)
 
-     st.page_link("pages/2_About.py",label="Contact Me",icon="📱")
 main()
