@@ -133,6 +133,7 @@ def pass_map(Match_ID,P_ID):
 
     edff = edf[edf['x_start'] - edf['x_end'] >= 0]
     edfb = edf[edf['x_start'] - edf['x_end'] < 0]
+    assists = a[a['pass_assist'] == true]
     
 
 
@@ -144,16 +145,20 @@ def pass_map(Match_ID,P_ID):
 
 
     P.scatter(x = edfb['x_start'],y = edfb['y_start'],ax = ax,c = 'b')
-    P.lines(xstart = edfb['x_start'],ystart = edfb['y_start'],xend = edfb['x_end'],yend = edfb['y_end'],ax = ax,comet = True,color = 'g')
+    P.lines(xstart = edfb['x_start'],ystart = edfb['y_start'],xend = edfb['x_end'],yend = edfb['y_end'],ax = ax,color = 'g')
    
     P.scatter(x = edff['x_start'],y = edff['y_start'],ax = ax,c = 'b')
-    P.lines(xstart = edff['x_start'],ystart = edff['y_start'],xend = edff['x_end'],yend = edff['y_end'],ax = ax,comet = True,color = 'r')
+    P.lines(xstart = edff['x_start'],ystart = edff['y_start'],xend = edff['x_end'],yend = edff['y_end'],ax = ax,color = 'r',marker = 'A')
+
+    P.scatter(x = assists['x_start'],y = assists['y_start'],ax = ax,c = 'b')
+    P.lines(xstart = assists['x_start'],ystart = assists['y_start'],xend = assists['x_end'],yend = assists['y_end'],ax = ax,comet = True,color = 'y')
 
     patch1 = mpatches.Patch(color='green', label='Forward Passes')
-    patch2 = mpatches.Patch(color='red', label='Backward Passes') 
-    plt.legend(handles=([patch1,patch2])) 
+    patch2 = mpatches.Patch(color='red', label='Backward Passes')
+    patch3 = mpatches.Patch(color='yellow', label='Assist') 
+    plt.legend(handles=([patch1,patch2,patch3])) 
 
-    ax_title = ax.set_title(f"Pass Map of {player} ({edf.shape[0]} passes)\n Forward Passes --> {edfb.shape[0]} \n Backward Passes --> {edff.shape[0]}",fontsize=15)
+    ax_title = ax.set_title(f"Pass Map of {player} ({edf.shape[0]} passes)\n Forward Passes --> {edfb.shape[0]} \n Backward Passes --> {edff.shape[0]}\n Assists --> {assists.shape[0]}",fontsize=15)
 
 
 
