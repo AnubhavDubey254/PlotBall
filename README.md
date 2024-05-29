@@ -33,28 +33,32 @@ npm start
 ```
 Open your browser and navigate to http://localhost:3000 to see the app in action.
 
-##Contributing
+## Contributing
 We welcome contributions from the community! Here are some ways you can help:
 
 Issues: Report bugs or request new features by opening an issue.
 Pull Requests: Contribute directly by submitting pull requests.
 Feedback: Provide feedback through the Contact Us page in the app.
-How to Contribute
+## How to Contribute
 Fork the repository.
 Create a new branch for your feature or bugfix:
+```
 bash
 Copy code
 git checkout -b feature-or-bugfix-name
+```
 Make your changes and commit them with a clear message.
 Push your changes to your forked repository:
+```
 bash
 Copy code
 git push origin feature-or-bugfix-name
+```
 Open a pull request to the main repository.
-##Contact
+## Contact
 If you have any questions, suggestions, or feedback, feel free to reach out through the Contact Us page in the app or visit our GitHub repository.
 
 Thank you for your support and interest in PlotBall!
 
-##License
+## License
 This project is licensed under the [MIT LICENSE](LICENSE). See the LICENSE file for details.
