@@ -145,10 +145,10 @@ def pass_map(Match_ID,P_ID):
 
 
     P.scatter(x = edfb['x_start'],y = edfb['y_start'],ax = ax,c = 'b')
-    P.lines(xstart = edfb['x_start'],ystart = edfb['y_start'],xend = edfb['x_end'],yend = edfb['y_end'],ax = ax,comet='True',color = 'g')
+    P.lines(xstart = edfb['x_start'],ystart = edfb['y_start'],xend = edfb['x_end'],yend = edfb['y_end'],ax = ax,comet=True,color = 'g')
    
     P.scatter(x = edff['x_start'],y = edff['y_start'],ax = ax,c = 'b')
-    P.lines(xstart = edff['x_start'],ystart = edff['y_start'],xend = edff['x_end'],yend = edff['y_end'],ax = ax,ccomet='True',olor = 'r')
+    P.lines(xstart = edff['x_start'],ystart = edff['y_start'],xend = edff['x_end'],yend = edff['y_end'],ax = ax,ccomet=True,olor = 'r')
 
     P.scatter(x = assists['x_start'],y = assists['y_start'],ax = ax,c = 'b',marker = 'D')
     P.lines(xstart = assists['x_start'],ystart = assists['y_start'],xend = assists['x_end'],yend = assists['y_end'],ax = ax,comet = True,color = 'y')
