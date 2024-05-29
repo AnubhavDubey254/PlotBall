@@ -22,9 +22,4 @@ Whether you're a data enthusiast or a sports analyst, your input will help shape
 Thank you for your support and interest in this project. ''')
 
 
-#Switching Pages
-def page_switch():
-    st.page_link("pages/1_Data_viz.py",label = "Draw Plots",icon = "📊")
-    st.page_link("pages/2_Contact_Us.py",label="Contact Us",icon = "📱")
 
-page_switch()
