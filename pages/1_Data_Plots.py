@@ -129,10 +129,10 @@ for key, value in team_to_id.items():
 
 
 def Download_image(img):
-    st.download_button("Download Plot",img)
+    st.download_button("Download Plot",img,mime="image/png")
 
 
-@st.cache_data
+@st.cache_data(experimental_allow_widgets=True)
 def pass_map(Match_ID,P_ID):
     match_df1 = sb.events(match_id = Match_ID)
     match_df1 = match_df1[(match_df1['type'] == 'Pass') & (match_df1['player_id']>0)]
