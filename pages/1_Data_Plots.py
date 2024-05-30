@@ -176,6 +176,7 @@ def pass_map(Match_ID,P_ID):
 
     fig.savefig("Pass_Plots")
     img = st.image('Pass_Plots.png')
+    return img
 
 @st.cache_data
 def ShotMap(Match_ID,P_ID):
@@ -205,6 +206,7 @@ def ShotMap(Match_ID,P_ID):
             va='center', ha='center')
     fig.savefig("Shot_Map")
     img = st.image('Shot_Map.png')
+    return img
 
 def Download_image(img):
     st.download_button("Download Plot",img)
