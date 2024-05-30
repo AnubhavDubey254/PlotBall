@@ -117,7 +117,7 @@ for key, value in team_to_id.items():
 
 
 
-
+@st.cache_data
 def pass_map(Match_ID,P_ID):
     match_df1 = sb.events(match_id = Match_ID)
     match_df1 = match_df1[(match_df1['type'] == 'Pass') & (match_df1['player_id']>0)]
@@ -165,6 +165,7 @@ def pass_map(Match_ID,P_ID):
     fig.savefig("Pass_Plots")
     st.image('Pass_Plots.png')
 
+@st.cache_data
 def ShotMap(Match_ID,P_ID):
     match_df2 = sb.events(match_id = Match_ID)
     sdf = match_df2[match_df2['type'] == 'Shot']
