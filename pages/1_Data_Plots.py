@@ -92,9 +92,18 @@ team = df['team'].unique().tolist()
 player_to_id = dict(zip(players_id,players))
 team_to_id = dict(zip(team_id,team))
 
+#Getting Score
+@st.cache_data
+def Game_Score(Match_ID):
+    match_df = sb.events(match_id = Match_ID)
+    team1_score = match_df[(match_df['shot_outcome'] == 'Goal') & (match_df.team_id.unique().tolist[1])]
+    team2_score = match_df[(match_df['shot_outcome'] == 'Goal') & (match_df.team_id.unique().tolist[2])]
+    score = f"( {team1_score} - {team2_score} )"
+
+Game_Score(Match_ID)
 
 #Displaying Selection Bars
-a = st.subheader(Match)
+a = st.subheader(f"{Match} {score})
 
 
 
@@ -113,7 +122,6 @@ for key, value in team_to_id.items():
             team_id = key
         else:
              opp = value
-
 
 
 
