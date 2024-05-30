@@ -176,18 +176,12 @@ def pass_map(Match_ID,P_ID):
 
     ax_title = ax.set_title(f"Pass Map of {player} ({edf.shape[0]} passes)\n Forward Passes --> {edfb.shape[0]} \n Backward Passes --> {edff.shape[0]}\n Assists --> {assists.shape[0]}",fontsize=15)
 
-
-
-    fig.savefig("Pass_Plots")
-    st.image('Pass_Plots.png')
     buffer = io.BytesIO()
-    
-    fig.savefig('Pass_Map.png')
 
-# Save the figure as a pdf to the buffer
-fig.write_image(file=buffer, format="pdf")
+    fig.savefig("Pass_Plots.png")
+    st.image('Pass_Plots.png')
 
-st.download_button(
+    st.download_button(
         label="Download Plot",
         data=buffer,
         file_name="Pass_Map.png",
