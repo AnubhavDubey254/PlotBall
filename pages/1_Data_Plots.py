@@ -182,7 +182,18 @@ def pass_map(Match_ID,P_ID):
     st.image('Pass_Plots.png')
     buffer = io.BytesIO()
     
-    fig.savefig(file=buffer, format="png")
+    fig.savefig('Pass_Map.png')
+
+# Save the figure as a pdf to the buffer
+fig.write_image(file=buffer, format="pdf")
+
+# Download the pdf from the buffer
+st.download_button(
+    label="Download PDF",
+    data=buffer,
+    file_name="figure.pdf",
+    mime="application/pdf",
+))
 
 
     st.download_button(
