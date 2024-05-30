@@ -214,9 +214,18 @@ def ShotMap(Match_ID,P_ID):
             size=10,
             color='Red',
             va='center', ha='center')
-    fig.savefig("Shot_Map")
-    img = st.image('Shot_Map.png')
     
+    buffer = io.BytesIO()
+
+    fig.savefig("Shot_Map.png")
+    st.image('Shot_Map.png')
+
+    st.download_button(
+        label="Download Plot",
+        data=buffer,
+        file_name="Shot_Map.png",
+        mime="image/png",
+            )
      
 def main():
      if stat == 'Pass Map':
