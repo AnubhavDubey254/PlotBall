@@ -129,7 +129,7 @@ for key, value in team_to_id.items():
 
 
 def Download_image(img):
-    st.download_button("Download Plot",img,mime="image/png")
+    st.download_button(label = "Download Plot",data = img,mime="image/png")
 
 
 @st.cache_data(experimental_allow_widgets=True)
