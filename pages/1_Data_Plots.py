@@ -187,16 +187,7 @@ def pass_map(Match_ID,P_ID):
 # Save the figure as a pdf to the buffer
 fig.write_image(file=buffer, format="pdf")
 
-# Download the pdf from the buffer
 st.download_button(
-    label="Download PDF",
-    data=buffer,
-    file_name="figure.pdf",
-    mime="application/pdf",
-)
-
-
-    st.download_button(
         label="Download Plot",
         data=buffer,
         file_name="Pass_Map.png",
