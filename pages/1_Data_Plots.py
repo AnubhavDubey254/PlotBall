@@ -103,7 +103,7 @@ def Game_Score(Match_ID):
 Game_Score(Match_ID)
 
 #Displaying Selection Bars
-a = st.subheader(f"{Match} {score})
+a = st.subheader(f"{Match} {score}")
 
 
 
