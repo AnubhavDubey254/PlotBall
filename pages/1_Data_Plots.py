@@ -179,10 +179,10 @@ def pass_map(Match_ID,P_ID):
 
 
     fig.savefig("Pass_Plots")
-    img = st.image('Pass_Plots.png')
+    st.image('Pass_Plots.png')
     buffer = io.BytesIO()
     
-    fig.write_image(file=buffer, format="png")
+    fig.savefig(file=buffer, format="png")
 
 
     st.download_button(
