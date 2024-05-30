@@ -100,7 +100,7 @@ def Game_Score(Match_ID):
     team2 = match_df.team_id.unique().tolist()[1]
     team1_score = match_df[(match_df['shot_outcome'] == 'Goal') & (match_df['team_id'] == team1)]
     team2_score = match_df[(match_df['shot_outcome'] == 'Goal') & (match_df['team_id'] == team2)]
-    score = f"( {team1_score} - {team2_score} )" 
+    score = f"( {team1_score.shape[0]} - {team2_score.shape[0]} )" 
     return score
 
 
