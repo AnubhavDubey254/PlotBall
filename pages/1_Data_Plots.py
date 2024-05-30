@@ -100,7 +100,7 @@ def Game_Score(Match_ID):
     team2_score = match_df[(match_df['shot_outcome'] == 'Goal') & (match_df.team_id.unique().tolist[2])]
     score = f"( {team1_score} - {team2_score} )" 
 
-Game_Score(Match_ID)
+Game_Score(Match_id)
 
 #Displaying Selection Bars
 a = st.subheader(f"{Match} {score}")
