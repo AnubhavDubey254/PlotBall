@@ -98,7 +98,7 @@ def Game_Score(Match_ID):
     match_df = sb.events(match_id = Match_ID)
     team1_score = match_df[(match_df['shot_outcome'] == 'Goal') & (match_df.team_id.unique().tolist[1])]
     team2_score = match_df[(match_df['shot_outcome'] == 'Goal') & (match_df.team_id.unique().tolist[2])]
-    score = f"( {team1_score} - {team2_score} )"
+    score = f"( {team1_score} - {team2_score} )" 
 
 Game_Score(Match_ID)
 
