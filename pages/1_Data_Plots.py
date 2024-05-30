@@ -128,6 +128,9 @@ for key, value in team_to_id.items():
              opp = value
 
 
+def Download_image(img):
+    st.download_button("Download Plot",img)
+
 
 @st.cache_data
 def pass_map(Match_ID,P_ID):
@@ -176,7 +179,7 @@ def pass_map(Match_ID,P_ID):
 
     fig.savefig("Pass_Plots")
     img = st.image('Pass_Plots.png')
-    return img
+    Download_image(img)
 
 @st.cache_data
 def ShotMap(Match_ID,P_ID):
@@ -206,17 +209,14 @@ def ShotMap(Match_ID,P_ID):
             va='center', ha='center')
     fig.savefig("Shot_Map")
     img = st.image('Shot_Map.png')
-    return img
-
-def Download_image(img):
-    st.download_button("Download Plot",img)
+    Download_image(img)
      
 def main():
      if stat == 'Pass Map':
         pass_map(Match_id,player_id)
-        Download_image(img)
+
      if stat == 'Shot Map':
         ShotMap(Match_id,player_id)
-        Download_image(img)
+
 
 main()
