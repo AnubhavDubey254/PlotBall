@@ -4,6 +4,7 @@ import pandas as pd
 from mplsoccer import Pitch,VerticalPitch
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches 
+import io
 
 #Page Setup
 st.set_page_config(
@@ -127,8 +128,8 @@ for key, value in team_to_id.items():
         else:
              opp = value
 
-
-def Download_image(img):
+buffer = io.BytesIO()
+def Download_image(img,buffer):
     st.download_button(label = "Download Plot",data = img,mime="image/png")
 
 
@@ -179,7 +180,17 @@ def pass_map(Match_ID,P_ID):
 
     fig.savefig("Pass_Plots")
     img = st.image('Pass_Plots.png')
-    Download_image(img)
+    buffer = io.BytesIO()
+    
+    fig.write_image(file=buffer, format="png")
+
+
+    st.download_button(
+        label="Download Plot",
+        data=buffer,
+        file_name="Pass_Map.png",
+        mime="image/png",
+            )
 
 @st.cache_data
 def ShotMap(Match_ID,P_ID):
@@ -209,7 +220,7 @@ def ShotMap(Match_ID,P_ID):
             va='center', ha='center')
     fig.savefig("Shot_Map")
     img = st.image('Shot_Map.png')
-    Download_image(img)
+    
      
 def main():
      if stat == 'Pass Map':
