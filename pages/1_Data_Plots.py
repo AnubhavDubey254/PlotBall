@@ -193,7 +193,7 @@ st.download_button(
     data=buffer,
     file_name="figure.pdf",
     mime="application/pdf",
-))
+)
 
 
     st.download_button(
