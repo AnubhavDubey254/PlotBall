@@ -103,10 +103,10 @@ def Game_Score(Match_ID):
     score = f"( {team1_score} - {team2_score} )" 
     return score
 
-Game_Score(Match_id)
+
 
 #Displaying Selection Bars
-a = st.subheader(f"{Match} {score}")
+a = st.subheader(f"{Match} {Game_Score(Match_id)}")
 
 
 
