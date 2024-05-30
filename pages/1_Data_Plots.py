@@ -175,7 +175,7 @@ def pass_map(Match_ID,P_ID):
 
 
     fig.savefig("Pass_Plots")
-    st.image('Pass_Plots.png')
+    img = st.image('Pass_Plots.png')
 
 @st.cache_data
 def ShotMap(Match_ID,P_ID):
@@ -204,12 +204,17 @@ def ShotMap(Match_ID,P_ID):
             color='Red',
             va='center', ha='center')
     fig.savefig("Shot_Map")
-    st.image('Shot_Map.png')
+    img = st.image('Shot_Map.png')
+
+def Download_image(img):
+    st.download_button("Download Plot",img)
      
 def main():
      if stat == 'Pass Map':
         pass_map(Match_id,player_id)
+        Download_image(img)
      if stat == 'Shot Map':
         ShotMap(Match_id,player_id)
+        Download_image(img)
 
 main()
