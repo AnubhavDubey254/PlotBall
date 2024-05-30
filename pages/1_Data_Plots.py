@@ -188,7 +188,7 @@ def pass_map(Match_ID,P_ID):
         mime="image/png",
             )
 
-@st.cache_data
+@st.cache_data(experimental_allow_widgets=True)
 def ShotMap(Match_ID,P_ID):
     match_df2 = sb.events(match_id = Match_ID)
     sdf = match_df2[match_df2['type'] == 'Shot']
