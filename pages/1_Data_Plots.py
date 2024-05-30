@@ -101,6 +101,7 @@ def Game_Score(Match_ID):
     team1_score = match_df[(match_df['shot_outcome'] == 'Goal') & (match_df['team_id'] == team1)]
     team2_score = match_df[(match_df['shot_outcome'] == 'Goal') & (match_df['team_id'] == team2)]
     score = f"( {team1_score} - {team2_score} )" 
+    return score
 
 Game_Score(Match_id)
 
